@@ -18,6 +18,7 @@
 // import { refs } from './js/refs';
 
 import { refs } from './js/refs.js';
+// import { getRefs } from './refs.js';
 import { taskTemplate } from './js/render-tasks.js';
 import { tasksTemplate } from './js/render-tasks.js';
 import { saveToLocalStorage } from './js/local-storage-api.js';
@@ -29,7 +30,7 @@ let tasks = [];
 
 document.addEventListener('DOMContentLoaded', () => {
   themeHandler();
-  tasks = getFromLocalStorage('tasks');
+  tasks = getFromLocalStorage('tasks') || [];
   refs.list.innerHTML = tasksTemplate(tasks);
   console.log(tasks);
 });
