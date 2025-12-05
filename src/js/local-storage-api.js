@@ -6,5 +6,5 @@ export function saveToLocalStorage(key, data) {
   // Get data from localStorage
   export function getFromLocalStorage(key) {
     const data = localStorage.getItem(key);
-    return data ? JSON.parse(data) : null; // return null if nothing stored
+    return data ? JSON.parse(data) : []; // return null if nothing stored
   };
